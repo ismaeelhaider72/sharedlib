@@ -1,3 +1,3 @@
-def call(Map config = [:]) {
-    sh "echo Hello ${config.name}. Today is ${config.dayOfWeek}."
+  	def call(Map config = [:]) {
+    sh "terraform plan -no-color -var imageId=${config.ImageId} -var instanceType=${config.InstanceType}"
 }
